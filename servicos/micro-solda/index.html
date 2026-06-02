@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth bg-[#050505]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Solda em Celular em Pindamonhangaba | Ferrari Cell</title>
+    <meta name="description" content="Laboratório de micro solda em Pindamonhangaba. Reparo e reconstrução de trilhas, troca de conectores FPC e CIs em placas de iPhone e Android com microscópio.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#050505',
+                        accent: '#E63B2E',
+                        surface: '#0D0D12',
+                        textMain: '#FFFFFF',
+                        textMuted: '#A1A1AA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-primary text-textMain antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+    <div class="noise-overlay"></div>
+
+    <!-- HEADER -->
+    <header id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 transition-all duration-300 rounded-full px-6 py-3 glass-panel flex items-center justify-between">
+        <a href="../../index.html" class="flex items-center gap-2 cursor-pointer magnetic-btn">
+            <i data-lucide="cpu" class="w-5 h-5 text-accent"></i>
+            <span class="font-display font-bold text-base tracking-tight">FERRARI CELL</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-textMuted">
+            <div class="relative group">
+                <a href="#" class="link-hover hover:text-white transition-colors flex items-center gap-1">Serviços <i data-lucide="chevron-down" class="w-3 h-3"></i></a>
+                <div class="absolute top-full left-0 mt-4 w-64 bg-[#0D0D12]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-3 z-50">
+                    <a href="../conserto-de-celular-iphone/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Conserto de Celular iPhone</a>
+                    <a href="../conserto-de-celular-android/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Conserto de Celular Android</a>
+                    <a href="../troca-de-tela/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Troca de Tela</a>
+                    <a href="../troca-de-bateria/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Troca de Bateria</a>
+                    <a href="../conserto-de-placa/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Conserto de Placa</a>
+                    <a href="../micro-solda/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 text-accent transition-colors border-b border-white/5">Micro Solda</a>
+                    <a href="../reparo-de-software/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Reparo de Software</a>
+                    <a href="../conserto-de-ipad/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Conserto de iPad</a>
+                    <a href="../conserto-de-notebook/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Conserto de Notebook</a>
+                    <a href="../reparo-face-id/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Reparo Face ID</a>
+                    <a href="../reparo-de-camera/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors">Reparo de Câmera</a>
+                </div>
+            </div>
+            <a href="../../index.html#especialistas" class="link-hover hover:text-white transition-colors">Especialistas</a>
+                        <div class="relative group">
+                <a href="#" class="link-hover hover:text-white transition-colors flex items-center gap-1">Vendas <i data-lucide="chevron-down" class="w-3 h-3"></i></a>
+                <div class="absolute top-full left-0 mt-4 w-48 bg-[#0D0D12]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-3 z-50">
+                    <a href="../../iphones/iphone-11/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">iPhone 11</a>
+                    <a href="../../iphones/iphone-12/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">iPhone 12</a>
+                    <a href="../../iphones/iphone-13/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">iPhone 13</a>
+                    <a href="../../iphones/iphone-14/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">iPhone 14</a>
+                    <a href="../../iphones/iphone-15/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">iPhone 15</a>
+                    <a href="../../iphones/iphone-16/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">iPhone 16</a>
+                    <a href="../../iphones/iphone-17-pro-max/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors">iPhone 17 Pro Max</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="../../como-chegar/index.html" class="link-hover hover:text-white transition-colors flex items-center gap-1">Como Chegar <i data-lucide="chevron-down" class="w-3 h-3"></i></a>
+                <div class="absolute top-full right-0 mt-4 w-48 bg-[#0D0D12]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-3 z-50">
+                    <a href="../../como-chegar/pindamonhangaba/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors border-b border-white/5">Pindamonhangaba</a>
+                    <a href="../../como-chegar/taubate/index.html" class="px-5 py-2.5 text-[13px] hover:bg-white/5 hover:text-white transition-colors">Taubaté</a>
+                </div>
+            </div>
+            <a href="../../index.html#contato" class="link-hover hover:text-white transition-colors">Contato</a>
+        </nav>
+        <a href="https://wa.me/5512999999999?text=Olá, quero um orçamento para serviço de micro solda." target="_blank" class="magnetic-btn bg-white text-primary hover:bg-gray-200 px-5 py-2 rounded-full text-sm font-bold transition-colors">Falar no WhatsApp</a>
+    </header>
+
+    <!-- 1. HEADER SEO -->
+    <section class="relative w-full pt-32 pb-10 px-6 md:px-12 lg:px-24 hero-bg text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center gap-4">
+            <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-bold tracking-tighter leading-[1.1] text-white">
+                Micro Solda em Celular em Pindamonhangaba
+            </h1>
+            <p class="text-lg text-textMuted max-w-2xl font-light leading-relaxed mt-2">
+                Precisão cirúrgica no microscópio. Realizamos reballing, recuperação de conectores FPC e reconstrução de trilhas para iPhone e Android.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. IMAGEM HORIZONTAL -->
+    <section class="px-6 md:px-12 lg:px-24 mb-16 relative z-20">
+        <div class="max-w-5xl mx-auto h-[30vh] md:h-[400px] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=2000&q=80" alt="Equipamentos técnicos e microscópio para micro solda" class="w-full h-full object-cover grayscale-[30%]">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO SEO DENSO -->
+    <section class="py-12 relative">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            
+            <!-- 3. H2 #1 -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-display font-bold mb-6 text-white">O que é microssolda e quando ela é necessária no seu celular?</h2>
+                <p class="text-textMuted leading-relaxed mb-4 text-lg">
+                    A microssolda (ou micro solda) é o nível mais profundo de manutenção de hardware dentro da eletrônica moderna. Enquanto a maioria das assistências atua apenas "desplugando e plugando" módulos inteiros — como encaixar uma tela nova ou trocar uma bateria —, a microssolda atua consertando componentes invisíveis a olho nu, substituindo peças que estão cravadas na placa mãe principal.
+                </p>
+                <p class="text-textMuted leading-relaxed mb-4 text-lg">
+                    Essa técnica cirúrgica se torna absolutamente necessária em diversos cenários comuns do dia a dia, muitas vezes desconhecidos pelo usuário. Por exemplo: quando a porta de carregamento quebra fisicamente por dentro e ela é soldada diretamente na placa; quando uma tentativa amadora de trocar a tela do aparelho arranca o encaixe plástico (conector FPC); ou quando um curto-circuito literalmente carboniza um microchip controlador de energia (PMIC).
+                </p>
+                <p class="text-textMuted leading-relaxed text-lg">
+                    Em resumo, a microssolda é aplicada sempre que uma peça vital da placa sofre danos físicos (rompimentos por queda) ou danos elétricos severos, evitando que você precise gastar pequenas fortunas substituindo a placa lógica inteira e salvando todos os arquivos que estavam gravados no dispositivo.
+                </p>
+            </div>
+
+            <!-- 4. H2 #2 -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-display font-bold mb-6 text-white">Laboratório avançado de micro solda em Pindamonhangaba</h2>
+                <p class="text-textMuted leading-relaxed mb-4 text-lg">
+                    Para manipular componentes menores que um grão de areia, não basta ter as mãos firmes. A Ferrari Cell implementou em Pindamonhangaba um laboratório especializado focado unicamente na precisão. Toda a nossa bancada é equipada com microscópios trinoculares de zoom variável que nos permitem enxergar as nanoestruturas da placa.
+                </p>
+                <p class="text-textMuted leading-relaxed mb-4 text-lg">
+                    Utilizamos ferros de solda com pontas micrométricas que transferem calor em milissegundos (como a linha JBC/Hakko) e estações de ar quente calibradas digitalmente. Isso é crucial porque aplicar muito calor na placa pode derreter chips vizinhos, enquanto aplicar calor de menos pode arrancar as trilhas condutoras quando tentamos remover a peça. 
+                </p>
+                <p class="text-textMuted leading-relaxed text-lg">
+                    Trabalhamos com o melhor estanho, fluxos de solda livres de halogênio que evitam corrosão posterior, e máscaras curáveis por radiação UV que garantem que, após religarmos um fio de cobre rompidamente fino (jumper), ele fique isolado e não se rompa novamente nem mesmo com pequenas quedas futuras do celular.
+                </p>
+            </div>
+
+            <!-- 5. H2 #3 -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-display font-bold mb-6 text-white">Reballing, troca de FPC e recuperação de trilhas rompidas</h2>
+                <p class="text-textMuted leading-relaxed mb-4 text-lg">
+                    Nossos serviços de microssolda cobrem os três pilares críticos da recuperação de placas para iPhones e aparelhos Android da Samsung e Motorola. O primeiro é a substituição de conectores FPC — as "tomadinhas" de plástico onde as telas, câmeras e flex de botões são encaixadas. Se um técnico sem experiência amassou esses pinos internos, nós removemos o plástico quebrado e soldamos um conector original novo, pino a pino.
+                </p>
+                <p class="text-textMuted leading-relaxed text-lg">
+                    Também realizamos a técnica complexa de "Reballing", muito comum em iPhones que sofreram fortes impactos. O reballing consiste em usar calor controlado para levantar chips de memória ou processadores da placa base, limpar a solda oxidada ou rachada, e refazer minúsculas esferas perfeitas de estanho através de um molde metálico cortado a laser, resoldando a peça para restabelecer a comunicação entre o chip e o sistema central.
+                </p>
+            </div>
+
+            <!-- 6. H2 #4 -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-display font-bold mb-6 text-white">Por que escolher a Ferrari Cell para reparos em nível de placa?</h2>
+                <p class="text-textMuted leading-relaxed mb-4 text-lg">
+                    Reparos profundos de eletrônica exigem um compromisso sério com a integridade do aparelho e com a ética profissional. Assistências não especializadas, na tentativa de arrumar problemas que não compreendem, frequentemente praticam o famoso "esquenta placa", aplicando calor generalizado na esperança de que algo volte a funcionar, o que invariavelmente encurta a vida do dispositivo para algumas semanas e destrói de vez as esperanças de reparo.
+                </p>
+                <p class="text-textMuted leading-relaxed mb-4 text-lg">
+                    Nós, na Ferrari Cell, pautamos o nosso serviço pelo estudo do circuito. Não existe adivinhação. Verificamos as tensões elétricas, injetamos correntes controladas para achar as fugas, e aplicamos a microssolda exatamente e unicamente no ponto de ruptura.
+                </p>
+                <p class="text-textMuted leading-relaxed text-lg">
+                    Oferecemos nossos serviços de soldagem de precisão para clientes finais e também somos o laboratório de apoio para dezenas de lojistas da região do Vale do Paraíba. Confie em quem possui as ferramentas corretas e o domínio técnico para devolver a funcionalidade original ao seu investimento tecnológico.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. LINKAGEM INTERNA (Serviços Relacionados) -->
+    <section class="py-24 relative border-t border-white/5 bg-[#080808]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+            <h2 class="text-3xl font-display font-bold mb-10">Serviços Relacionados</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="../conserto-de-placa/index.html" class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group flex items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Conserto de Placa</h3>
+                        <p class="text-xs text-textMuted">Recuperação total elétrica.</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-accent transition-colors"></i>
+                </a>
+                <a href="../reparo-face-id/index.html" class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group flex items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Reparo Face ID</h3>
+                        <p class="text-xs text-textMuted">Técnica de microssolda em prisma.</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-accent transition-colors"></i>
+                </a>
+                <a href="../conserto-de-celular-iphone/index.html" class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group flex items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Conserto de iPhone</h3>
+                        <p class="text-xs text-textMuted">Reparo de trilhas Apple.</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-accent transition-colors"></i>
+                </a>
+                <a href="../conserto-de-celular-android/index.html" class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group flex items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Conserto Android</h3>
+                        <p class="text-xs text-textMuted">Troca de porta de carga soldada.</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-accent transition-colors"></i>
+                </a>
+                <a href="../troca-de-tela/index.html" class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group flex items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Troca de Tela</h3>
+                        <p class="text-xs text-textMuted">Se o FPC do touch foi danificado.</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-accent transition-colors"></i>
+                </a>
+                <a href="../reparo-de-camera/index.html" class="glass-panel p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group flex items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Reparo de Câmera</h3>
+                        <p class="text-xs text-textMuted">Restauração de foco automático.</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-accent transition-colors"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA FINAL -->
+    <section class="py-24 relative border-t border-accent/20 hero-bg text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-display font-bold mb-6">Problemas severos exigem precisão extrema</h2>
+            <p class="text-lg text-textMuted mb-10">Não jogue seu aparelho fora. Envie seu celular para o nosso laboratório de microssolda e deixe a engenharia recuperar o seu dispositivo e seus dados.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5512999999999?text=Olá, preciso de um serviço avançado de micro solda." class="magnetic-btn w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-full text-sm font-bold flex items-center justify-center gap-2 hover:bg-[#ff5f53] transition-all shadow-lg">
+                    Agendar avaliação técnica <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="../../index.html#contato" class="magnetic-btn w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold border border-white/20 hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i> Como chegar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#030303] pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div>
+                    <h4 class="font-bold mb-4 font-display text-white text-base">FERRARI CELL</h4>
+                    <p class="text-textMuted text-xs leading-relaxed max-w-xs">Microeletrônica, reballing e soldagem de precisão em Pindamonhangaba.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 font-display text-white text-sm">Navegação</h4>
+                    <ul class="space-y-3 text-xs text-textMuted">
+                        <li><a href="../../index.html" class="hover:text-accent transition-colors">Início</a></li>
+                        <li><a href="../../index.html#blog" class="hover:text-accent transition-colors">Blog</a></li>
+                        <li><a href="../../como-chegar/index.html" class="hover:text-accent transition-colors">Como Chegar</a></li>
+                        <li><a href="../../index.html#contato" class="hover:text-accent transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 font-display text-white text-sm">Contato</h4>
+                    <ul class="space-y-3 text-xs text-textMuted">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-3 h-3 mt-0.5 text-accent shrink-0"></i>
+                            <span>R. Dr. Inácio Marcondes Rezende, 166, São Benedito, Pindamonhangaba</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-t border-white/10 pt-6">
+                <p class="text-xs text-gray-500 font-mono tracking-widest uppercase">&copy; 2026 Ferrari Cell. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
