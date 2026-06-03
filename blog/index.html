@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth bg-[#050505]">
 <head>
  <meta charset="UTF-8">
@@ -73,7 +73,7 @@
  <a href="../blog/index.html" class="link-hover text-white transition-colors font-bold">Blog</a>
  </nav>
 
- <a href="https://wa.me/5512999999999" target="_blank" class="magnetic-btn bg-white text-primary hover:bg-gray-200 px-4 py-1.5 rounded-full text-xs font-bold transition-colors flex items-center gap-1.5">
+ <a href="https://wa.me/5512992608879" target="_blank" class="magnetic-btn bg-white text-primary hover:bg-gray-200 px-4 py-1.5 rounded-full text-xs font-bold transition-colors flex items-center gap-1.5">
  Agendar Reparo
  </a>
 </header>
@@ -89,13 +89,13 @@
  <p class="text-textMuted text-sm md:text-base mb-8">
  Dicas, novidades e informações detalhadas sobre manutenção de dispositivos Apple e Android.
  </p>
- 
+
  <div class="relative max-w-lg mx-auto">
  <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
  <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
  </div>
- <input type="text" class="w-full bg-surface border border-white/10 text-white rounded-full pl-11 pr-4 py-3.5 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all text-sm" placeholder="Buscar artigos, reparos ou dicas...">
- <button class="absolute inset-y-1.5 right-1.5 bg-white text-primary px-4 py-1.5 rounded-full text-xs font-bold hover:bg-gray-200 transition-colors">
+ <input id="blog-search" type="text" class="w-full bg-surface border border-white/10 text-white rounded-full pl-11 pr-4 py-3.5 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all text-sm" placeholder="Buscar artigos, reparos ou dicas...">
+ <button id="search-btn" class="absolute inset-y-1.5 right-1.5 bg-white text-primary px-4 py-1.5 rounded-full text-xs font-bold hover:bg-gray-200 transition-colors">
  Buscar
  </button>
  </div>
@@ -103,17 +103,17 @@
 
  <!-- CATEGORIAS -->
  <div class="flex flex-wrap items-center justify-center gap-2 gs-reveal">
- <a href="#" class="px-4 py-1.5 rounded-full bg-accent text-white text-xs font-bold transition-colors">Todos</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">iPhone</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Android</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">iPad</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Notebook</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Micro Solda</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Bateria</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Tela</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Face ID</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Dicas</a>
- <a href="#" class="px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Manutenção</a>
+ <button data-cat="todos" class="cat-btn px-4 py-1.5 rounded-full bg-accent text-white text-xs font-bold transition-colors">Todos</button>
+ <button data-cat="iphone" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">iPhone</button>
+ <button data-cat="android" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Android</button>
+ <button data-cat="ipad" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">iPad</button>
+ <button data-cat="notebook" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Notebook</button>
+ <button data-cat="microsolda" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Micro Solda</button>
+ <button data-cat="bateria" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Bateria</button>
+ <button data-cat="tela" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Tela</button>
+ <button data-cat="faceid" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Face ID</button>
+ <button data-cat="dicas" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Dicas</button>
+ <button data-cat="manutencao" class="cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors">Manutenção</button>
  </div>
  </div>
 </section>
@@ -121,12 +121,16 @@
 <!-- BLOG GRID -->
 <section class="py-16 relative">
  <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-20">
- <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
- 
+
+ <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
  <!-- Artigo 1 -->
- <a href="iphone-nao-carrega-o-que-fazer/index.html" class="glass-panel rounded-2xl overflow-hidden group gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
+ <a href="iphone-nao-carrega-o-que-fazer/index.html"
+  data-categorias="iphone hardware dicas manutencao"
+  data-search="iphone nao carrega cabo carregador porta lightning problema hardware conserto reparo pindamonhangaba"
+  class="blog-card glass-panel rounded-2xl overflow-hidden group gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
  <div class="h-48 relative overflow-hidden">
- <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=800&q=80" alt="iPhone Conectado no Cabo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+ <img src="../fotos/iphone%20n%C3%A3o%20carrega.jpeg" alt="iPhone não carrega" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
  <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D12] to-transparent"></div>
  </div>
  <div class="p-6 flex flex-col flex-1 bg-surface">
@@ -141,9 +145,12 @@
  </a>
 
  <!-- Artigo 2 -->
- <a href="celular-caiu-na-agua-o-que-fazer/index.html" class="glass-panel rounded-2xl overflow-hidden group gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
+ <a href="celular-caiu-na-agua-o-que-fazer/index.html"
+  data-categorias="dicas manutencao iphone android emergencia"
+  data-search="celular caiu agua molhou molhado o que fazer primeiros minutos agua liquido dano umidade reparo recuperar"
+  class="blog-card glass-panel rounded-2xl overflow-hidden group gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
  <div class="h-48 relative overflow-hidden">
- <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=800&q=80" alt="Celular molhado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+ <img src="../fotos/caiu%20na%20%C3%A1gua.jpeg" alt="Celular caiu na água" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
  <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D12] to-transparent"></div>
  </div>
  <div class="p-6 flex flex-col flex-1 bg-surface">
@@ -158,9 +165,12 @@
  </a>
 
  <!-- Artigo 3 -->
- <a href="saude-da-bateria-mitos-e-verdades-sobre-carregamento/index.html" class="glass-panel rounded-2xl overflow-hidden group gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
+ <a href="saude-da-bateria-mitos-e-verdades-sobre-carregamento/index.html"
+  data-categorias="bateria dicas manutencao iphone android"
+  data-search="bateria saude mitos verdades carregamento descarregando rapido ios android porcentagem autonomia ciclo vida util"
+  class="blog-card glass-panel rounded-2xl overflow-hidden group gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
  <div class="h-48 relative overflow-hidden">
- <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80" alt="Bateria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+ <img src="../fotos/bateria%20ruim.jpeg" alt="Bateria descarregando rápido" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
  <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D12] to-transparent"></div>
  </div>
  <div class="p-6 flex flex-col flex-1 bg-surface">
@@ -176,21 +186,19 @@
 
  </div>
 
- <!-- PAGINAÇíO -->
- <div class="flex justify-center mt-12 gap-2 gs-reveal">
- <button class="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 bg-white/5 text-gray-500 cursor-not-allowed">
- <i data-lucide="chevron-left" class="w-4 h-4"></i>
- </button>
- <button class="w-10 h-10 rounded-full flex items-center justify-center bg-accent text-white font-bold text-sm">
- 1
- </button>
- <button class="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 bg-surface hover:bg-white/10 text-white font-bold text-sm transition-colors">
- 2
- </button>
- <button class="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 bg-surface hover:bg-white/10 text-white transition-colors">
- <i data-lucide="chevron-right" class="w-4 h-4"></i>
- </button>
+ <!-- ESTADO VAZIO -->
+ <div id="no-results" class="hidden py-20 text-center">
+ <div class="w-16 h-16 rounded-full bg-surface border border-white/10 flex items-center justify-center mx-auto mb-5">
+ <i data-lucide="search-x" class="w-7 h-7 text-textMuted"></i>
  </div>
+ <h3 class="text-lg font-display font-bold mb-2">Nenhum artigo encontrado</h3>
+ <p class="text-textMuted text-sm max-w-sm mx-auto">Tente buscar por outro termo ou selecionar uma categoria diferente.</p>
+ <button onclick="resetFiltros()" class="mt-6 px-5 py-2 rounded-full border border-white/10 text-sm font-semibold hover:bg-white/5 transition-colors">Ver todos os artigos</button>
+ </div>
+
+ <!-- PAGINAÇÃO -->
+ <div id="pagination" class="flex justify-center mt-12 gap-2 gs-reveal"></div>
+
  </div>
 </section>
 
@@ -199,20 +207,20 @@
  <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-20">
  <div class="bg-surface border border-white/10 rounded-2xl p-7 md:p-10 mb-12 text-center relative overflow-hidden">
  <div class="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-accent/5 pointer-events-none"></div>
- <h2 class="text-xl md:text-3xl font-display font-bold mb-3 relative z-10">Precisando de ajuda com seu Apple?</h2>
- <p class="text-sm text-textMuted mb-5 relative z-10 max-w-lg mx-auto">Traga seu aparelho para a principal assistência Apple de Pindamonhangaba.</p>
- <a href="https://wa.me/5512999999999" class="magnetic-btn bg-accent text-white px-7 py-3 rounded-full font-bold text-sm inline-flex items-center gap-2 hover:bg-[#ff5f53] transition-colors relative z-10">
- Agendar Avaliação Gratuita <i data-lucide="arrow-right" class="w-4 h-4"></i>
+ <h2 class="text-xl md:text-3xl font-display font-bold mb-3 relative z-10">Precisando de ajuda com seu iPhone?</h2>
+ <p class="text-sm text-textMuted mb-5 relative z-10 max-w-lg mx-auto">Traga seu aparelho para a principal assistência técnica de iPhone de Pindamonhangaba.</p>
+ <a href="https://wa.me/5512992608879" class="magnetic-btn bg-accent text-white px-7 py-3 rounded-full font-bold text-sm inline-flex items-center gap-2 hover:bg-[#ff5f53] transition-colors relative z-10">
+ Solicitar Orçamento <i data-lucide="arrow-right" class="w-4 h-4"></i>
  </a>
  </div>
 
  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-7 mb-9">
  <div class="lg:col-span-2">
  <div class="flex items-center gap-1.5 mb-3"><i data-lucide="cpu" class="w-4 h-4 text-accent"></i><span class="font-display font-bold text-sm tracking-tight">FERRARI CELL</span></div>
- <p class="text-textMuted text-xs leading-relaxed max-w-sm mb-4">A referência máxima em manutenção Apple, hardware premium e microssolda. Atendendo Pindamonhangaba, Taubaté e região.</p>
+ <p class="text-textMuted text-xs leading-relaxed max-w-sm mb-4">A referência máxima em manutenção de iPhone, hardware premium e microssolda. Atendendo Pindamonhangaba, Taubaté e região.</p>
  <div class="flex items-center gap-2">
- <a href="#" class="w-7 h-7 rounded-full bg-surface flex items-center justify-center hover:bg-white hover:text-primary transition-colors text-textMuted border border-white/5"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
- <a href="#" class="w-7 h-7 rounded-full bg-surface flex items-center justify-center hover:bg-white hover:text-primary transition-colors text-textMuted border border-white/5"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
+ <a href="https://instagram.com/ferraricellapple" target="_blank" class="w-7 h-7 rounded-full bg-surface flex items-center justify-center hover:bg-white hover:text-primary transition-colors text-textMuted border border-white/5"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
+ <a href="https://facebook.com/ferraricellapple" target="_blank" class="w-7 h-7 rounded-full bg-surface flex items-center justify-center hover:bg-white hover:text-primary transition-colors text-textMuted border border-white/5"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
  </div>
  </div>
  <div>
@@ -238,7 +246,7 @@
  <h4 class="font-bold mb-3 font-display text-white text-xs">Contato</h4>
  <ul class="space-y-2 text-xs text-textMuted">
  <li class="flex items-start gap-1.5"><i data-lucide="map-pin" class="w-3 h-3 mt-0.5 text-accent shrink-0"></i><span>R. Dr. Inácio Marcondes Rezende, 166, São Benedito, Pindamonhangaba</span></li>
- <li class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3 h-3 text-accent shrink-0"></i><span>(12) 99999-9999</span></li>
+ <li class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3 h-3 text-accent shrink-0"></i><span>(12) 99260-8879</span></li>
  </ul>
  </div>
  </div>
@@ -257,18 +265,150 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
  lucide.createIcons();
- // Simple script to run animations and noise similar to main site
+
  gsap.registerPlugin(ScrollTrigger);
- gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
- gsap.fromTo(elem, { y: 40, opacity: 0 }, {
- y: 0, opacity: 1, duration: 1, ease: "power3.out",
- scrollTrigger: { trigger: elem, start: "top 85%" }
+ gsap.utils.toArray('.gs-reveal').forEach(function(el) {
+ gsap.fromTo(el, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%" } });
+ });
+
+ // ─── Estado ───────────────────────────────────────────
+ const ITEMS_PER_PAGE = 6;
+ let activeCat = 'todos';
+ let searchTerm = '';
+ let currentPage = 1;
+
+ const allCards = Array.from(document.querySelectorAll('.blog-card'));
+ const noResults = document.getElementById('no-results');
+ const paginationEl = document.getElementById('pagination');
+
+ // ─── Normalização ─────────────────────────────────────
+ function norm(str) {
+ return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
+ }
+
+ // ─── Filtro ───────────────────────────────────────────
+ function getFiltered() {
+ return allCards.filter(function(card) {
+ var cats = card.dataset.categorias || '';
+ var search = card.dataset.search || '';
+ var title = norm(card.querySelector('h2') ? card.querySelector('h2').textContent : '');
+
+ var catOk = activeCat === 'todos' || cats.split(' ').indexOf(activeCat) !== -1;
+ var searchOk = !searchTerm || norm(search).indexOf(norm(searchTerm)) !== -1 || title.indexOf(norm(searchTerm)) !== -1;
+
+ return catOk && searchOk;
+ });
+ }
+
+ // ─── Renderização ─────────────────────────────────────
+ function render() {
+ var filtered = getFiltered();
+ var total = filtered.length;
+ var totalPages = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
+
+ if (currentPage > totalPages) currentPage = 1;
+
+ var start = (currentPage - 1) * ITEMS_PER_PAGE;
+ var pageItems = filtered.slice(start, start + ITEMS_PER_PAGE);
+
+ allCards.forEach(function(c) { c.classList.add('hidden'); });
+ pageItems.forEach(function(c) { c.classList.remove('hidden'); });
+
+ noResults.classList.toggle('hidden', total > 0);
+
+ renderPagination(total, totalPages);
+ }
+
+ // ─── Paginação ────────────────────────────────────────
+ function renderPagination(total, totalPages) {
+ paginationEl.innerHTML = '';
+ if (totalPages <= 1) return;
+
+ // Botão anterior
+ var prev = document.createElement('button');
+ prev.innerHTML = '<i data-lucide="chevron-left" class="w-4 h-4"></i>';
+ prev.className = 'w-10 h-10 rounded-full flex items-center justify-center border border-white/10 transition-colors ' +
+ (currentPage === 1 ? 'bg-white/5 text-gray-600 cursor-not-allowed' : 'bg-surface hover:bg-white/10 text-white cursor-pointer');
+ if (currentPage > 1) {
+ prev.onclick = function() { currentPage--; render(); window.scrollTo({ top: 400, behavior: 'smooth' }); };
+ }
+ paginationEl.appendChild(prev);
+
+ // Botões numerados
+ for (var i = 1; i <= totalPages; i++) {
+ (function(page) {
+ var btn = document.createElement('button');
+ btn.textContent = page;
+ btn.className = 'w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-colors ' +
+ (page === currentPage ? 'bg-accent text-white' : 'border border-white/10 bg-surface hover:bg-white/10 text-white cursor-pointer');
+ btn.onclick = function() { currentPage = page; render(); window.scrollTo({ top: 400, behavior: 'smooth' }); };
+ paginationEl.appendChild(btn);
+ })(i);
+ }
+
+ // Botão próximo
+ var next = document.createElement('button');
+ next.innerHTML = '<i data-lucide="chevron-right" class="w-4 h-4"></i>';
+ next.className = 'w-10 h-10 rounded-full flex items-center justify-center border border-white/10 transition-colors ' +
+ (currentPage === totalPages ? 'bg-white/5 text-gray-600 cursor-not-allowed' : 'bg-surface hover:bg-white/10 text-white cursor-pointer');
+ if (currentPage < totalPages) {
+ next.onclick = function() { currentPage++; render(); window.scrollTo({ top: 400, behavior: 'smooth' }); };
+ }
+ paginationEl.appendChild(next);
+
+ lucide.createIcons();
+ }
+
+ // ─── Categorias ───────────────────────────────────────
+ document.querySelectorAll('.cat-btn').forEach(function(btn) {
+ btn.addEventListener('click', function() {
+ activeCat = btn.dataset.cat;
+ currentPage = 1;
+
+ document.querySelectorAll('.cat-btn').forEach(function(b) {
+ b.className = 'cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors';
+ });
+ btn.className = 'cat-btn px-4 py-1.5 rounded-full bg-accent text-white text-xs font-bold transition-colors';
+
+ render();
  });
  });
- gsap.fromTo(".gs-reveal-card", { y: 40, opacity: 0 }, {
- y: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.1,
- scrollTrigger: { trigger: ".gs-reveal-card", start: "top 85%" }
+
+ // ─── Busca ────────────────────────────────────────────
+ var searchInput = document.getElementById('blog-search');
+ var searchButton = document.getElementById('search-btn');
+
+ function doSearch() {
+ searchTerm = searchInput.value;
+ currentPage = 1;
+ render();
+ }
+
+ searchButton.addEventListener('click', doSearch);
+ searchInput.addEventListener('keydown', function(e) {
+ if (e.key === 'Enter') doSearch();
  });
+ searchInput.addEventListener('input', function() {
+ searchTerm = searchInput.value;
+ currentPage = 1;
+ render();
+ });
+
+ // ─── Reset ────────────────────────────────────────────
+ function resetFiltros() {
+ activeCat = 'todos';
+ searchTerm = '';
+ currentPage = 1;
+ searchInput.value = '';
+ document.querySelectorAll('.cat-btn').forEach(function(b) {
+ b.className = 'cat-btn px-4 py-1.5 rounded-full bg-surface border border-white/10 text-textMuted hover:text-white hover:border-white/30 text-xs font-semibold transition-colors';
+ });
+ document.querySelector('[data-cat="todos"]').className = 'cat-btn px-4 py-1.5 rounded-full bg-accent text-white text-xs font-bold transition-colors';
+ render();
+ }
+
+ // ─── Init ─────────────────────────────────────────────
+ render();
 </script>
 </body>
 </html>
