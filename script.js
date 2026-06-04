@@ -60,24 +60,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// ── Services carousel: transform-based, exactly 5 cards visible ──────────────
+// ── Services carousel: transform-based, responsive visible count ──────────────
 function initServicesCarousel() {
  const track = document.getElementById('services-track');
  const outer = document.getElementById('services-outer');
  if (!track || !outer) return;
 
  const cards = Array.from(track.querySelectorAll('.services-card'));
- const VISIBLE = 5;
- const GAP = 12; // gap-3 = 0.75rem = 12px
+ const GAP = 12;
  let current = 0;
 
- function innerWidth() {
+ function getVisible() {
+ const w = window.innerWidth;
+ if (w >= 1024) return 5;
+ if (w >= 768) return 3;
+ if (w >= 480) return 2;
+ return 1;
+ }
+
+ function outerInnerWidth() {
  const s = window.getComputedStyle(outer);
  return outer.clientWidth - parseFloat(s.paddingLeft) - parseFloat(s.paddingRight);
  }
 
  function cardWidth() {
- return (innerWidth() - GAP * (VISIBLE - 1)) / VISIBLE;
+ const vis = getVisible();
+ return (outerInnerWidth() - GAP * (vis - 1)) / vis;
  }
 
  function applyWidths() {
@@ -86,7 +94,7 @@ function initServicesCarousel() {
  }
 
  function slideTo(index) {
- const max = Math.max(0, cards.length - VISIBLE);
+ const max = Math.max(0, cards.length - getVisible());
  current = Math.max(0, Math.min(index, max));
  const offset = current * (cardWidth() + GAP);
  track.style.transform = `translateX(-${offset}px)`;
@@ -96,7 +104,7 @@ function initServicesCarousel() {
  function syncButtons() {
  const prev = document.getElementById('services-prev');
  const next = document.getElementById('services-next');
- const max = Math.max(0, cards.length - VISIBLE);
+ const max = Math.max(0, cards.length - getVisible());
  if (prev) prev.disabled = current <= 0;
  if (next) next.disabled = current >= max;
  }
@@ -104,19 +112,17 @@ function initServicesCarousel() {
  applyWidths();
  slideTo(0);
 
- // Resize → recalculate and stay on current index
  const ro = new ResizeObserver(() => { applyWidths(); slideTo(current); });
  ro.observe(outer);
 
  document.getElementById('services-prev')?.addEventListener('click', () => slideTo(current - 1));
  document.getElementById('services-next')?.addEventListener('click', () => slideTo(current + 1));
 
- // Touch swipe support
  let tx = 0;
  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
  track.addEventListener('touchend', e => {
  const dx = tx - e.changedTouches[0].clientX;
- if (Math.abs(dx) > 48) slideTo(current + (dx > 0 ? 1 : -1));
+ if (Math.abs(dx) > 40) slideTo(current + (dx > 0 ? 1 : -1));
  }, { passive: true });
 }
 
