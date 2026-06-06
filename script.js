@@ -49,11 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
  // ── Magnetic buttons ─────────────────────────────────────────────────────
  document.querySelectorAll('.magnetic-btn').forEach(btn => {
+ let rect = null;
+ btn.addEventListener('mouseenter', () => { rect = btn.getBoundingClientRect(); });
  btn.addEventListener('mousemove', e => {
- const r = btn.getBoundingClientRect();
- gsap.to(btn, { x: (e.clientX - r.left - r.width / 2) * 0.14, y: (e.clientY - r.top - r.height / 2) * 0.14, duration: 0.4, ease: 'power2.out' });
+ if (!rect) return;
+ gsap.to(btn, { x: (e.clientX - rect.left - rect.width / 2) * 0.14, y: (e.clientY - rect.top - rect.height / 2) * 0.14, duration: 0.4, ease: 'power2.out' });
  });
  btn.addEventListener('mouseleave', () => {
+ rect = null;
  gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
  });
  });

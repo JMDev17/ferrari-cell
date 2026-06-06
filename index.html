@@ -9,7 +9,7 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link rel="preconnect" href="https://images.unsplash.com">
- <link rel="dns-prefetch" href="https://unpkg.com">
+ <link rel="dns-prefetch" href="https://esm.sh">
  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
  <!-- Fontes async (não bloqueante) -->
  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -30,9 +30,7 @@
  }
  }
  </script>
- <link rel="stylesheet" href="style.css">
- <!-- Lucide carregado de forma não bloqueante -->
- <script src="https://unpkg.com/lucide@latest" defer></script>
+ <style>html{scroll-behavior:smooth}body{background-color:#050505;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden}h1,h2,h3,h4,h5,h6,.font-display{font-family:'Space Grotesk',sans-serif}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#050505}::-webkit-scrollbar-thumb{background:#1f1f22;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#E63B2E}.noise-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")}.text-gradient{background:linear-gradient(135deg,#fff 0%,#a1a1aa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-gradient-accent{background:linear-gradient(135deg,#ff5f53 0%,#E63B2E 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.glass-panel{background:rgba(13,13,18,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.05)}.glass-panel-hover:hover{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1)}.magnetic-btn{transition:transform .3s cubic-bezier(.25,.46,.45,.94)}.magnetic-btn:hover{transform:scale(1.03) translateY(-1px)}.link-hover{position:relative;display:inline-block}.link-hover::after{content:'';position:absolute;width:100%;transform:scaleX(0);height:1px;bottom:-2px;left:0;background-color:#E63B2E;transform-origin:bottom right;transition:transform .3s cubic-bezier(.25,.46,.45,.94)}.link-hover:hover::after{transform:scaleX(1);transform-origin:bottom left}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}@keyframes pulse-dot{0%{transform:scale(.95);box-shadow:0 0 0 0 rgba(34,197,94,.7)}70%{transform:scale(1);box-shadow:0 0 0 6px rgba(34,197,94,0)}100%{transform:scale(.95);box-shadow:0 0 0 0 rgba(34,197,94,0)}}.status-dot{animation:pulse-dot 2s infinite}.reveal-text{clip-path:polygon(0 0,100% 0,100% 100%,0% 100%)}.hero-bg{background:radial-gradient(circle at 50% 50%,rgba(230,59,46,.08) 0%,rgba(5,5,5,1) 60%)}.hardware-card{position:relative;overflow:hidden}.hardware-card .card-img-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.25,.46,.45,.94),opacity .4s ease;z-index:0;opacity:.82}.hardware-card:hover .card-img-bg{transform:scale(1.06);opacity:1}.hardware-card .card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.96) 0%,rgba(5,5,5,.6) 38%,rgba(5,5,5,.12) 65%,transparent 100%);z-index:1}.hardware-card-content{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;height:100%}#navbar.navbar-scrolled{background:rgba(5,5,5,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.06);box-shadow:0 8px 32px rgba(0,0,0,.4)}.active-drag{cursor:grabbing!important;user-select:none}</style>
 </head>
 <body class="bg-primary text-textMain antialiased overflow-x-hidden selection:bg-accent selection:text-white">
 <div class="noise-overlay"></div>
@@ -177,7 +175,7 @@
  </div>
  </div>
  <div class="relative w-full h-[38vh] sm:h-[44vh] lg:h-[540px] rounded-[2rem] overflow-hidden order-1 lg:order-2 hero-content">
- <img src="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1400&q=85&fm=webp" alt="Técnico realizando reparo especializado em iPhone" width="1400" height="933" fetchpriority="high" decoding="sync" class="absolute inset-0 w-full h-full object-cover object-center brightness-[0.72]">
+ <img src="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1400&q=85&fm=webp" srcset="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=640&q=80&fm=webp 640w,https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1024&q=82&fm=webp 1024w,https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1400&q=85&fm=webp 1400w" sizes="(max-width:1024px) 100vw, 50vw" alt="Técnico realizando reparo especializado em iPhone" width="1400" height="933" fetchpriority="high" decoding="sync" class="absolute inset-0 w-full h-full object-cover object-center brightness-[0.72]">
  <!-- Fade bottom para o fundo do site -->
  <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/25 to-transparent"></div>
  <!-- Fade lateral esquerda no desktop — integra com coluna de texto -->
@@ -209,7 +207,7 @@
  <div class="flex gap-3 pb-4 transition-transform duration-500 ease-out will-change-transform" id="services-track">
 
  <a href="servicos/conserto-de-celular-iphone/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de iPhone" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Conserto de iPhone" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Apple</span>
@@ -220,7 +218,7 @@
  </a>
 
  <a href="servicos/micro-solda/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Microssolda" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Microssolda" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Laboratório</span>
@@ -231,7 +229,7 @@
  </a>
 
  <a href="servicos/troca-de-tela/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Troca de Tela" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Troca de Tela" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Display</span>
@@ -253,7 +251,7 @@
  </a>
 
  <a href="servicos/conserto-de-placa/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de Placa" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Conserto de Placa" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Placa</span>
@@ -264,7 +262,7 @@
  </a>
 
  <a href="servicos/reparo-de-software/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Reparo de Software" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Reparo de Software" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Software</span>
@@ -275,7 +273,7 @@
  </a>
 
  <a href="servicos/conserto-de-ipad/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de iPad" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Conserto de iPad" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Tablet</span>
@@ -286,7 +284,7 @@
  </a>
 
  <a href="servicos/conserto-de-notebook/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de Notebook" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Conserto de Notebook" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Laptop</span>
@@ -297,7 +295,7 @@
  </a>
 
  <a href="servicos/reparo-face-id/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Reparo Face ID iPhone" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Reparo Face ID iPhone" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Biometria</span>
@@ -308,7 +306,7 @@
  </a>
 
  <a href="servicos/reparo-de-camera/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Reparo de Câmera" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Reparo de Câmera" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Óptica</span>
@@ -319,7 +317,7 @@
  </a>
 
  <a href="servicos/conserto-de-celular-android/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto Android" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Conserto Android" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Android</span>
@@ -357,7 +355,7 @@
 
  <div class="grid lg:grid-cols-2 gap-4 gs-reveal">
  <div class="rounded-[1.75rem] overflow-hidden h-[250px] lg:h-[370px] relative border border-white/10 group">
- <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80&fm=webp" alt="Microssolda placa mãe iPhone" width="1200" height="800" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
+ <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=75&fm=webp 600w,https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80&fm=webp 1200w" sizes="(min-width:1024px) 48vw,100vw" alt="Microssolda placa mãe iPhone" width="1200" height="800" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
  <div class="absolute bottom-5 left-5 right-5">
  <h3 class="text-base font-bold text-white mb-1">Engenharia Reversa</h3>
@@ -366,7 +364,7 @@
  </div>
  <div class="grid grid-rows-2 gap-4">
  <div class="rounded-[1.75rem] overflow-hidden relative border border-white/10 group">
- <img src="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Componentes de iPhone desmontados em bancada de reparo" width="800" height="600" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+ <img src="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 24vw,(min-width:640px) 48vw,100vw" alt="Componentes de iPhone desmontados em bancada de reparo" width="800" height="600" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
  <div class="absolute inset-0 bg-[#050505]/60"></div>
  <div class="absolute inset-0 p-5 flex flex-col justify-end">
  <h3 class="text-sm font-bold text-white mb-1">Equipamentos Industriais</h3>
@@ -805,6 +803,7 @@
  </a>
 </div>
 
+<script type="module">import{createIcons,Cpu,ChevronDown,ArrowRight,ChevronLeft,ChevronRight,MapPin,Clock,Phone,Smartphone,MessageCircle,MessageSquare,Instagram,Facebook,Navigation,Star,BadgeCheck,ExternalLink,Microscope,ShieldCheck,ArrowLeft}from'https://esm.sh/lucide@latest';createIcons({icons:{Cpu,ChevronDown,ArrowRight,ChevronLeft,ChevronRight,MapPin,Clock,Phone,Smartphone,MessageCircle,MessageSquare,Instagram,Facebook,Navigation,Star,BadgeCheck,ExternalLink,Microscope,ShieldCheck,ArrowLeft}});</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 <script src="script.js" defer></script>
