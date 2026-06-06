@@ -5,6 +5,17 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Ferrari Cell | Assistência Especializada Apple em Pindamonhangaba</title>
  <meta name="description" content="Assistência Técnica Especializada em iPhone, iPad e Android em Pindamonhangaba. Atendimento 24h. Especialistas em microssolda, reparo de placas e troca de bateria. Atendimento premium para Taubaté e região.">
+ <!-- Preconnects -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconnect" href="https://images.unsplash.com">
+ <link rel="dns-prefetch" href="https://unpkg.com">
+ <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+ <!-- Fontes async (não bloqueante) -->
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+ <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"></noscript>
+ <!-- Preload imagem LCP (hero) -->
+ <link rel="preload" as="image" href="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1400&q=85&fm=webp" fetchpriority="high">
  <script src="https://cdn.tailwindcss.com"></script>
  <script>
  tailwind.config = {
@@ -20,7 +31,8 @@
  }
  </script>
  <link rel="stylesheet" href="style.css">
- <script src="https://unpkg.com/lucide@latest"></script>
+ <!-- Lucide carregado de forma não bloqueante -->
+ <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body class="bg-primary text-textMain antialiased overflow-x-hidden selection:bg-accent selection:text-white">
 <div class="noise-overlay"></div>
@@ -165,7 +177,7 @@
  </div>
  </div>
  <div class="relative w-full h-[38vh] sm:h-[44vh] lg:h-[540px] rounded-[2rem] overflow-hidden order-1 lg:order-2 hero-content">
- <img src="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1400&q=85" alt="Técnico realizando reparo especializado em iPhone" class="absolute inset-0 w-full h-full object-cover object-center brightness-[0.72]">
+ <img src="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1400&q=85&fm=webp" alt="Técnico realizando reparo especializado em iPhone" width="1400" height="933" fetchpriority="high" decoding="sync" class="absolute inset-0 w-full h-full object-cover object-center brightness-[0.72]">
  <!-- Fade bottom para o fundo do site -->
  <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/25 to-transparent"></div>
  <!-- Fade lateral esquerda no desktop — integra com coluna de texto -->
@@ -197,7 +209,7 @@
  <div class="flex gap-3 pb-4 transition-transform duration-500 ease-out will-change-transform" id="services-track">
 
  <a href="servicos/conserto-de-celular-iphone/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=800&q=80" alt="Conserto de iPhone" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de iPhone" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Apple</span>
@@ -208,7 +220,7 @@
  </a>
 
  <a href="servicos/micro-solda/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80" alt="Microssolda" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Microssolda" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Laboratório</span>
@@ -219,7 +231,7 @@
  </a>
 
  <a href="servicos/troca-de-tela/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80" alt="Troca de Tela" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Troca de Tela" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Display</span>
@@ -230,7 +242,7 @@
  </a>
 
  <a href="servicos/troca-de-bateria/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="fotos/troca%20de%20bateria.png" alt="Troca de Bateria" class="card-img-bg">
+ <img src="fotos/troca%20de%20bateria.png" alt="Troca de Bateria" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Energia</span>
@@ -241,7 +253,7 @@
  </a>
 
  <a href="servicos/conserto-de-placa/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80" alt="Conserto de Placa" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de Placa" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Placa</span>
@@ -252,7 +264,7 @@
  </a>
 
  <a href="servicos/reparo-de-software/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80" alt="Reparo de Software" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Reparo de Software" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Software</span>
@@ -263,7 +275,7 @@
  </a>
 
  <a href="servicos/conserto-de-ipad/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80" alt="Conserto de iPad" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de iPad" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Tablet</span>
@@ -274,7 +286,7 @@
  </a>
 
  <a href="servicos/conserto-de-notebook/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Conserto de Notebook" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto de Notebook" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Laptop</span>
@@ -285,7 +297,7 @@
  </a>
 
  <a href="servicos/reparo-face-id/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=800&q=80" alt="Reparo Face ID" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Reparo Face ID iPhone" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Biometria</span>
@@ -296,7 +308,7 @@
  </a>
 
  <a href="servicos/reparo-de-camera/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1591815302525-756a9bcc3425?auto=format&fit=crop&w=800&q=80" alt="Reparo de Câmera" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Reparo de Câmera" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Óptica</span>
@@ -307,7 +319,7 @@
  </a>
 
  <a href="servicos/conserto-de-celular-android/index.html" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80" alt="Conserto Android" class="card-img-bg">
+ <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Conserto Android" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Android</span>
@@ -345,7 +357,7 @@
 
  <div class="grid lg:grid-cols-2 gap-4 gs-reveal">
  <div class="rounded-[1.75rem] overflow-hidden h-[250px] lg:h-[370px] relative border border-white/10 group">
- <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80" alt="Microssolda placa mãe iPhone" class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
+ <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80&fm=webp" alt="Microssolda placa mãe iPhone" width="1200" height="800" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
  <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
  <div class="absolute bottom-5 left-5 right-5">
  <h3 class="text-base font-bold text-white mb-1">Engenharia Reversa</h3>
@@ -354,7 +366,7 @@
  </div>
  <div class="grid grid-rows-2 gap-4">
  <div class="rounded-[1.75rem] overflow-hidden relative border border-white/10 group">
- <img src="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?auto=format&fit=crop&w=800&q=80" alt="Componentes de iPhone desmontados em bancada de reparo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+ <img src="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Componentes de iPhone desmontados em bancada de reparo" width="800" height="600" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
  <div class="absolute inset-0 bg-[#050505]/60"></div>
  <div class="absolute inset-0 p-5 flex flex-col justify-end">
  <h3 class="text-sm font-bold text-white mb-1">Equipamentos Industriais</h3>
@@ -403,7 +415,7 @@
  <h3 class="text-base font-display font-bold mb-1 relative z-10 text-white">iPhone 17 Pro Max</h3>
  <p class="text-xs text-gray-300 mb-3 relative z-10">O ápice tecnológico.</p>
  <div class="h-32 flex items-center justify-center mb-3 relative z-10">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/IPhone_16_Pro_Vector.svg/960px-IPhone_16_Pro_Vector.svg.png" alt="iPhone 17 Pro Max" class="h-full object-contain drop-shadow-2xl group-hover/c:scale-110 transition-transform duration-700">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/IPhone_16_Pro_Vector.svg/960px-IPhone_16_Pro_Vector.svg.png" alt="iPhone 17 Pro Max" width="200" height="400" loading="lazy" decoding="async" class="h-full object-contain drop-shadow-2xl group-hover/c:scale-110 transition-transform duration-700">
  </div>
  <span class="block bg-accent text-white rounded-full px-4 py-1.5 text-xs font-bold hover:bg-[#ff5f53] transition-all w-full relative z-10">Ver Estoque</span>
  </a>
@@ -414,7 +426,7 @@
  <h3 class="text-base font-display font-bold mb-1 relative z-10">iPhone 16</h3>
  <p class="text-xs text-textMuted mb-3 relative z-10">Nova geração.</p>
  <div class="h-32 flex items-center justify-center mb-3 relative z-10">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/IPhone_16_Vector.svg/960px-IPhone_16_Vector.svg.png" alt="iPhone 16" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/IPhone_16_Vector.svg/960px-IPhone_16_Vector.svg.png" alt="iPhone 16" width="200" height="400" loading="lazy" decoding="async" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
  </div>
  <span class="block bg-white text-primary rounded-full px-4 py-1.5 text-xs font-semibold hover:bg-gray-200 transition-all w-full relative z-10">Consultar</span>
  </a>
@@ -425,7 +437,7 @@
  <h3 class="text-base font-display font-bold mb-1 relative z-10">iPhone 15</h3>
  <p class="text-xs text-textMuted mb-3 relative z-10">O Titânio.</p>
  <div class="h-32 flex items-center justify-center mb-3 relative z-10">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IPhone_15_Vector.svg/960px-IPhone_15_Vector.svg.png" alt="iPhone 15" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IPhone_15_Vector.svg/960px-IPhone_15_Vector.svg.png" alt="iPhone 15" width="200" height="400" loading="lazy" decoding="async" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
  </div>
  <span class="block bg-white text-primary rounded-full px-4 py-1.5 text-xs font-semibold hover:bg-gray-200 transition-all w-full relative z-10">Consultar</span>
  </a>
@@ -436,7 +448,7 @@
  <h3 class="text-base font-display font-bold mb-1 relative z-10">iPhone 14</h3>
  <p class="text-xs text-textMuted mb-3 relative z-10">Desempenho.</p>
  <div class="h-32 flex items-center justify-center mb-3 relative z-10">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/IPhone_14_vector.svg/960px-IPhone_14_vector.svg.png" alt="iPhone 14" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/IPhone_14_vector.svg/960px-IPhone_14_vector.svg.png" alt="iPhone 14" width="200" height="400" loading="lazy" decoding="async" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
  </div>
  <span class="block bg-white text-primary rounded-full px-4 py-1.5 text-xs font-semibold hover:bg-gray-200 transition-all w-full relative z-10">Consultar</span>
  </a>
@@ -447,7 +459,7 @@
  <h3 class="text-base font-display font-bold mb-1 relative z-10">iPhone 13</h3>
  <p class="text-xs text-textMuted mb-3 relative z-10">Custo x Benefício.</p>
  <div class="h-32 flex items-center justify-center mb-3 relative z-10">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/960px-IPhone_13_vector.svg.png" alt="iPhone 13" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/960px-IPhone_13_vector.svg.png" alt="iPhone 13" width="200" height="400" loading="lazy" decoding="async" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
  </div>
  <span class="block bg-white text-primary rounded-full px-4 py-1.5 text-xs font-semibold hover:bg-gray-200 transition-all w-full relative z-10">Consultar</span>
  </a>
@@ -458,7 +470,7 @@
  <h3 class="text-base font-display font-bold mb-1 relative z-10">iPhone 12</h3>
  <p class="text-xs text-textMuted mb-3 relative z-10">O clássico 5G.</p>
  <div class="h-32 flex items-center justify-center mb-3 relative z-10">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/IPhone_12_Blue.svg/960px-IPhone_12_Blue.svg.png" alt="iPhone 12" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/IPhone_12_Blue.svg/960px-IPhone_12_Blue.svg.png" alt="iPhone 12" width="200" height="400" loading="lazy" decoding="async" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
  </div>
  <span class="block bg-white text-primary rounded-full px-4 py-1.5 text-xs font-semibold hover:bg-gray-200 transition-all w-full relative z-10">Consultar</span>
  </a>
@@ -469,7 +481,7 @@
  <h3 class="text-base font-display font-bold mb-1 relative z-10">iPhone 11</h3>
  <p class="text-xs text-textMuted mb-3 relative z-10">A porta de entrada.</p>
  <div class="h-32 flex items-center justify-center mb-3 relative z-10">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/IPhone_11_White.svg/960px-IPhone_11_White.svg.png" alt="iPhone 11" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/IPhone_11_White.svg/960px-IPhone_11_White.svg.png" alt="iPhone 11" width="200" height="400" loading="lazy" decoding="async" class="h-full object-contain drop-shadow-xl group-hover/c:scale-105 transition-transform duration-700">
  </div>
  <span class="block bg-white text-primary rounded-full px-4 py-1.5 text-xs font-semibold hover:bg-gray-200 transition-all w-full relative z-10">Consultar</span>
  </a>
@@ -694,7 +706,7 @@
  </div>
  <div class="grid md:grid-cols-3 gap-4">
  <a href="blog/iphone-nao-carrega-o-que-fazer/index.html" class="glass-panel rounded-xl overflow-hidden group cursor-pointer gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
- <div class="h-28 relative overflow-hidden"><img src="fotos/iphone%20n%C3%A3o%20carrega.jpeg" alt="iPhone não carrega" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+ <div class="h-28 relative overflow-hidden"><img src="fotos/iphone%20n%C3%A3o%20carrega.jpeg" alt="iPhone não carrega" width="800" height="450" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
  <div class="p-4 flex flex-col flex-1 bg-surface">
  <div class="flex items-center gap-2 mb-2 text-[10px] font-mono"><span class="text-accent bg-accent/10 border border-accent/20 px-1.5 py-0.5 rounded">HARDWARE</span><span class="text-gray-500">24 Maio</span></div>
  <h3 class="text-sm font-display font-bold mb-2 leading-snug group-hover:text-accent transition-colors">iPhone não carrega. O que fazer?</h3>
@@ -702,7 +714,7 @@
  </div>
  </a>
  <a href="blog/celular-caiu-na-agua-o-que-fazer/index.html" class="glass-panel rounded-xl overflow-hidden group cursor-pointer gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
- <div class="h-28 relative overflow-hidden"><img src="fotos/caiu%20na%20%C3%A1gua.jpeg" alt="Celular caiu na água" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+ <div class="h-28 relative overflow-hidden"><img src="fotos/caiu%20na%20%C3%A1gua.jpeg" alt="Celular caiu na água" width="800" height="450" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
  <div class="p-4 flex flex-col flex-1 bg-surface">
  <div class="flex items-center gap-2 mb-2 text-[10px] font-mono"><span class="text-accent bg-accent/10 border border-accent/20 px-1.5 py-0.5 rounded">EMERGÊNCIA</span><span class="text-gray-500">12 Maio</span></div>
  <h3 class="text-sm font-display font-bold mb-2 leading-snug group-hover:text-accent transition-colors">Caiu na água? O guia definitivo</h3>
@@ -710,7 +722,7 @@
  </div>
  </a>
  <a href="blog/saude-da-bateria-mitos-e-verdades-sobre-carregamento/index.html" class="glass-panel rounded-xl overflow-hidden group cursor-pointer gs-reveal-card border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
- <div class="h-28 relative overflow-hidden"><img src="fotos/bateria%20ruim.jpeg" alt="Bateria descarregando rápido" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
+ <div class="h-28 relative overflow-hidden"><img src="fotos/bateria%20ruim.jpeg" alt="Bateria descarregando rápido" width="800" height="450" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
  <div class="p-4 flex flex-col flex-1 bg-surface">
  <div class="flex items-center gap-2 mb-2 text-[10px] font-mono"><span class="text-accent bg-accent/10 border border-accent/20 px-1.5 py-0.5 rounded">DICAS</span><span class="text-gray-500">02 Maio</span></div>
  <h3 class="text-sm font-display font-bold mb-2 leading-snug group-hover:text-accent transition-colors">Bateria descarregando rápido no iOS 17?</h3>
@@ -793,9 +805,9 @@
  </a>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+<script src="script.js" defer></script>
 <script>
 // ── Menu Mobile ──────────────────────────────────────────────
 (function () {
