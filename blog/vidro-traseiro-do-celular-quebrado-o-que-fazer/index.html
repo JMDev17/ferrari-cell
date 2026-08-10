@@ -12,7 +12,7 @@
  "@context": "https://schema.org",
  "@type": "Article",
  "headline": "Vidro Traseiro do Celular Quebrado: Vale a Pena Trocar?",
- "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80",
+ "image": "https://ferraricellsp.com.br/fotos/vidro-traseiro-hero.webp",
  "author": {
  "@type": "Organization",
  "name": "Ferrari Cell"
@@ -30,6 +30,9 @@
  }
  </script>
 
+ <link rel="preconnect" href="https://cdn.tailwindcss.com">
+ <link rel="preconnect" href="https://unpkg.com">
+ <link rel="preload" as="image" href="/fotos/vidro-traseiro-hero.avif" type="image/avif" fetchpriority="high">
  <script src="https://cdn.tailwindcss.com"></script>
  <script>
  tailwind.config = {
@@ -45,7 +48,7 @@
  }
  </script>
  <link rel="stylesheet" href="../../style.css">
- <script src="https://unpkg.com/lucide@latest"></script>
+ <script src="https://unpkg.com/lucide@1.31.0/dist/umd/lucide.min.js" defer></script>
 </head>
 <body class="bg-primary text-textMain antialiased overflow-x-hidden selection:bg-accent selection:text-white">
 <div class="noise-overlay"></div>
@@ -198,7 +201,11 @@
 
  <!-- Imagem Destacada -->
  <div class="w-full h-64 md:h-[400px] rounded-[1.75rem] overflow-hidden mb-12 border border-white/5 shadow-2xl relative gs-reveal">
- <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80" alt="Vidro traseiro de celular quebrado" class="absolute inset-0 w-full h-full object-cover">
+ <picture>
+ <source srcset="/fotos/vidro-traseiro-hero.avif" type="image/avif">
+ <source srcset="/fotos/vidro-traseiro-hero.webp" type="image/webp">
+ <img src="/fotos/vidro-traseiro-hero.webp" alt="Vidro traseiro de celular quebrado" width="900" height="506" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover">
+ </picture>
  </div>
 
  <!-- Corpo do Texto -->
@@ -266,7 +273,11 @@
  <div class="grid md:grid-cols-3 gap-6">
  <a href="/blog/troca-de-vidro-ou-troca-de-tela-entenda-a-diferenca/" class="glass-panel rounded-2xl overflow-hidden group border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
  <div class="h-40 relative overflow-hidden">
- <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80" alt="Troca de vidro ou troca de tela" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+ <picture>
+ <source srcset="/fotos/vidro-trincado-card.avif" type="image/avif">
+ <source srcset="/fotos/vidro-trincado-card.webp" type="image/webp">
+ <img src="/fotos/vidro-trincado-card.webp" alt="Troca de vidro ou troca de tela" width="600" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+ </picture>
  </div>
  <div class="p-5 flex flex-col flex-1 bg-surface">
  <span class="text-accent text-[10px] uppercase font-bold tracking-wider mb-2">Tela</span>
@@ -276,7 +287,11 @@
  </a>
  <a href="/servicos/troca-de-vidro/" class="glass-panel rounded-2xl overflow-hidden group border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300">
  <div class="h-40 relative overflow-hidden">
- <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80" alt="Troca de vidro de celular" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+ <picture>
+ <source srcset="/fotos/vidro-traseiro-card.avif" type="image/avif">
+ <source srcset="/fotos/vidro-traseiro-card.webp" type="image/webp">
+ <img src="/fotos/vidro-traseiro-card.webp" alt="Troca de vidro de celular" width="600" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+ </picture>
  </div>
  <div class="p-5 flex flex-col flex-1 bg-surface">
  <span class="text-accent text-[10px] uppercase font-bold tracking-wider mb-2">Serviços</span>
@@ -359,7 +374,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
- lucide.createIcons();
+ document.addEventListener('DOMContentLoaded',function(){lucide.createIcons();});
  gsap.registerPlugin(ScrollTrigger);
  gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
  gsap.fromTo(elem, { y: 20, opacity: 0 }, {

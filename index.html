@@ -16,6 +16,9 @@
  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"></noscript>
  <!-- Preload imagem LCP (hero) -->
  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&fit=crop&w=1400&q=85&fm=webp" fetchpriority="high">
+ <link rel="preconnect" href="https://cdn.tailwindcss.com">
+ <link rel="preconnect" href="https://unpkg.com">
+ <link rel="preconnect" href="https://images.unsplash.com">
  <script src="https://cdn.tailwindcss.com"></script>
  <script>
  tailwind.config = {
@@ -242,7 +245,11 @@
  </a>
 
  <a href="/servicos/troca-de-vidro/" class="services-card h-64 flex-none rounded-2xl hardware-card cursor-pointer block group/c border border-white/5">
- <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=800&q=80&fm=webp" srcset="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=400&q=70&fm=webp 400w,https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=800&q=80&fm=webp 800w" sizes="(min-width:1024px) 21vw,(min-width:768px) 34vw,(min-width:480px) 50vw,100vw" alt="Troca de Vidro" width="800" height="600" loading="lazy" decoding="async" class="card-img-bg">
+ <picture>
+ <source srcset="/fotos/vidro-trincado-card.avif" type="image/avif">
+ <source srcset="/fotos/vidro-trincado-card.webp" type="image/webp">
+ <img src="/fotos/vidro-trincado-card.webp" alt="Troca de Vidro" width="600" height="400" loading="lazy" decoding="async" class="card-img-bg">
+ </picture>
  <div class="card-overlay"></div>
  <div class="hardware-card-content p-4">
  <span class="text-accent text-[9px] font-bold uppercase tracking-widest block mb-1.5">Vidro</span>

@@ -6,6 +6,9 @@
  <title>Como Chegar saindo do Residencial Pasin | Ferrari Cell</title>
  <meta name="description" content="Assistência técnica especializada em iPhone e Android para clientes do Residencial Pasin em Pindamonhangaba. Rota rápida para a Ferrari Cell.">
  
+ <link rel="preconnect" href="https://cdn.tailwindcss.com">
+ <link rel="preconnect" href="https://unpkg.com">
+ <link rel="preconnect" href="https://images.unsplash.com">
  <script src="https://cdn.tailwindcss.com"></script>
  <script>
  tailwind.config = {
@@ -27,7 +30,7 @@
  }
  </script>
  <link rel="stylesheet" href="../../../style.css">
- <script src="https://unpkg.com/lucide@latest"></script>
+ <script src="https://unpkg.com/lucide@1.31.0/dist/umd/lucide.min.js" defer></script>
 </head>
 <body class="bg-primary text-textMain antialiased overflow-x-hidden selection:bg-accent selection:text-white">
  <div class="noise-overlay"></div>
@@ -268,7 +271,7 @@
  </footer>
 
  <script>
- lucide.createIcons();
+ document.addEventListener('DOMContentLoaded',function(){lucide.createIcons();});
  </script>
 <script>
 (function(){var btn=document.getElementById('mobile-menu-btn');var menu=document.getElementById('mobile-menu');var hb1=document.getElementById('hb1');var hb2=document.getElementById('hb2');var hb3=document.getElementById('hb3');if(!btn)return;var open=false;function toggle(){open=!open;if(open){menu.classList.remove('hidden');menu.classList.add('flex');document.body.style.overflow='hidden';hb1.style.transform='translateY(7px) rotate(45deg)';hb2.style.opacity='0';hb3.style.transform='translateY(-7px) rotate(-45deg)';hb3.style.width='20px';}else{menu.classList.add('hidden');menu.classList.remove('flex');document.body.style.overflow='';hb1.style.transform='';hb2.style.opacity='';hb3.style.transform='';hb3.style.width='';}}btn.addEventListener('click',toggle);})();

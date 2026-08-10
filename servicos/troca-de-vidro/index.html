@@ -6,6 +6,9 @@
  <title>Troca de Vidro de Celular em Pindamonhangaba | iPhone, Samsung e Android</title>
  <meta name="description" content="Troca de vidro de celular em Pindamonhangaba com laminação profissional. Substituição do vidro frontal e traseiro trincado para iPhone, Samsung e Motorola com garantia.">
 
+ <link rel="preconnect" href="https://cdn.tailwindcss.com">
+ <link rel="preconnect" href="https://unpkg.com">
+ <link rel="preload" as="image" href="/fotos/troca-vidro-hero.avif" type="image/avif" fetchpriority="high">
  <script src="https://cdn.tailwindcss.com"></script>
  <script>
  tailwind.config = {
@@ -27,7 +30,7 @@
  }
  </script>
  <link rel="stylesheet" href="../../style.css">
- <script src="https://unpkg.com/lucide@latest"></script>
+ <script src="https://unpkg.com/lucide@1.31.0/dist/umd/lucide.min.js" defer></script>
 </head>
 <body class="bg-primary text-textMain antialiased overflow-x-hidden selection:bg-accent selection:text-white">
  <div class="noise-overlay"></div>
@@ -162,7 +165,11 @@
  <!-- 2. IMAGEM HORIZONTAL -->
  <section class="px-6 md:px-12 lg:px-24 mb-16 relative z-20">
  <div class="max-w-5xl mx-auto h-[30vh] md:h-[400px] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl relative">
- <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=2000&q=80" alt="Vidro de celular trincado para troca" class="w-full h-full object-cover grayscale-[30%]">
+ <picture>
+ <source srcset="/fotos/troca-vidro-hero.avif" type="image/avif">
+ <source srcset="/fotos/troca-vidro-hero.webp" type="image/webp">
+ <img src="/fotos/troca-vidro-hero.webp" alt="Celular com vidro trincado para troca" width="900" height="506" fetchpriority="high" decoding="async" class="w-full h-full object-cover grayscale-[30%]">
+ </picture>
  <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
  </div>
  </section>
@@ -334,7 +341,7 @@
  </footer>
 
  <script>
- lucide.createIcons();
+ document.addEventListener('DOMContentLoaded',function(){lucide.createIcons();});
  </script>
 <script>
 (function(){var btn=document.getElementById('mobile-menu-btn');var menu=document.getElementById('mobile-menu');var hb1=document.getElementById('hb1');var hb2=document.getElementById('hb2');var hb3=document.getElementById('hb3');if(!btn)return;var open=false;function toggle(){open=!open;if(open){menu.classList.remove('hidden');menu.classList.add('flex');document.body.style.overflow='hidden';hb1.style.transform='translateY(7px) rotate(45deg)';hb2.style.opacity='0';hb3.style.transform='translateY(-7px) rotate(-45deg)';hb3.style.width='20px';}else{menu.classList.add('hidden');menu.classList.remove('flex');document.body.style.overflow='';hb1.style.transform='';hb2.style.opacity='';hb3.style.transform='';hb3.style.width='';}}btn.addEventListener('click',toggle);})();
